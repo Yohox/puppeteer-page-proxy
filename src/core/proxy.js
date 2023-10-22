@@ -60,6 +60,7 @@ const removeRequestListener = (page, listenerName) => {
 const useProxyPer = {
     // Call this if request object passed
     HTTPRequest: async (request, data) => {
+        try{
         let proxy, overrides;
         // Separate proxy and overrides
         if (type(data) === "object") {
@@ -72,6 +73,9 @@ const useProxyPer = {
         // Skip request if proxy omitted
         if (proxy) {await requestHandler(request, proxy, overrides)}
         else {request.continue(overrides)}
+        }catch(error){
+            //ignore
+        }
     },
 
     // Call this if page object passed
@@ -89,6 +93,8 @@ const useProxyPer = {
 
 // Main function
 const useProxy = async (target, data) => {
+    if(target.constructor.name == "CdpPage") return useProxyPer.CDPPage(target, data);
+    if(target.constructor.name == "CdpHTTPRequest") return useProxyPer.HTTPRequest(target, data);
     useProxyPer[target.constructor.name](target, data);
 };
 
