@@ -1,8 +1,8 @@
 {
-  "name": "@lem0/puppeteer-page-proxy",
+  "name": "@lem0-packages/puppeteer-page-proxy",
   "description": "Fork of Cuadrix/puppeteer-page-proxy that stopped working and hasnt been updated. Additional Node.js module to use with 'puppeteer' for setting proxies per page basis.",
   "version": "1.3.1",
-  "author": "LeM0 <lemo@lemo-services.com> (https://github.com/LeM0)",
+  "author": "LeM0 <npm@lemo-services.com> (https://github.com/LeM0)",
   "homepage": "https://github.com/LeM0/puppeteer-page-proxy",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
