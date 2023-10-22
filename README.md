@@ -18,7 +18,7 @@ Forwards intercepted requests from the browser to Node.js where it redoes the re
 
 ## Installation
 ```
-npm i puppeteer-page-proxy
+npm i @lem0-packages/puppeteer-page-proxy
 ```
 ## API
 #### useProxy(pageOrReq, proxy)
