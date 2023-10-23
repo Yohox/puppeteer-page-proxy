@@ -1,4 +1,10 @@
 # Change log
+### [1.3.3] - 2023-10-23
+#### Changes
+- Update readme
+- Update package.json
+- Fixed proxy for new puppeteer version
+# Change log
 ### [1.3.0] - 2022-11-03
 #### Changes
 - Update readme
