@@ -90,6 +90,9 @@ const useProxyPer = {
         if (existingListener) {
             removeRequestListener(page, existingListener);
         }
+        if(!proxy) {
+            return
+        }
         // Define a new listener
         const listener = async (request) => {
             await requestHandler(request, proxy);
