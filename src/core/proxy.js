@@ -77,7 +77,7 @@ const useProxyPer = {
                 }
             } else {proxy = data}
             // Skip request if proxy omitted
-            if (proxy) {await requestHandler(request, proxy, overrides)}
+            if (proxy) {return await requestHandler(request, proxy, overrides)}
             else {request.continue(overrides)}
         }catch(error){
             //ignore
