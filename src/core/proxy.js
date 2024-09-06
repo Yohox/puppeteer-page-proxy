@@ -32,12 +32,17 @@ const requestHandler = async (request, proxy, overrides = {}) => {
             await cookieHandler.setCookies(setCookieHeader);
             response.headers["set-cookie"] = undefined;
         }
+        let result = {
+            status: response.statusCode,
+            headers: response.headers,
+            body: response.body
+        }
         await request.respond({
             status: response.statusCode,
             headers: response.headers,
             body: response.body
         });
-        return response
+        return result
     } catch (error) {
         await request.abort();
     }
