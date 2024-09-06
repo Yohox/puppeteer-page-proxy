@@ -37,6 +37,7 @@ const requestHandler = async (request, proxy, overrides = {}) => {
             headers: response.headers,
             body: response.body
         });
+        return response
     } catch (error) {
         await request.abort();
     }
